@@ -1,7 +1,9 @@
 ## Overview
-Custom Nagios plugin to monitor the disk IO utilization for all disks.
+Custom Nagios plugin to monitor the disk IO utilization.
 
 Database serves (MySQL, InfluxDB, MongoDB, Elasticsearch, etc) heavily depend on disk performance as these type of  workload are disk IO bound, as such the disk IO can quickly become a bottleneck resulting in degraded performance, hense monitoring the disk performance for these types of servers is important.
+
+
 This plugin will monitor the disk IO utilization of all disks connected to the server, including any swap disks.
 
 ## Example output
@@ -26,7 +28,7 @@ WARNING: Disk-IO Utilization for Disks: nvme1n1:84%;  Warning:80%
 - yum install sysstat (Redhat, Centos)
 
 ## Configuration
-1. Copy script to NRPR plugin directory: "/usr/lib/nagios/plugins/"
+1. Copy script to NRPE plugin directory: "/usr/lib/nagios/plugins/"
 2. NRPE config entry: "/etc/nagios/nrpe.cfg"
 ```
 command[check_disk_io]=/usr/lib/nagios/plugins/check_disk_io.sh -W 80
