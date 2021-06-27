@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ## Overview
 Custom Nagios plugin to monitor disk IO utilization.
 
@@ -51,3 +53,6 @@ define command {
 ## Nagios UI screenshots
 <img src="img/nagios-diskio-ok.png" width="850">
 <img src="img/nagios-diskio-warning.png" width="850">
+
+## License
+Code released under the [MIT License](https://opensource.org/licenses/MIT)
